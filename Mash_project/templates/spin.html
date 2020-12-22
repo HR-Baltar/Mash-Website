@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{%block title %} spin {% endblock%}
+
+{%block content%}
+    <h1>Spin the Wheel!</h1>
+    <p> So these are the type of <i>{{topic}}</i>s that you like? Ehhh Okay.</p>
+    
+    {%if count != 3%}
+        {%for x in range(3,6) %}
+            <li>{{tp[x]}}</li>
+        {% endfor %}
+        
+        
+        <p> Now let me add some of my own..</p>
+
+        {%for x in range (0,3)%}
+            <li> {{tp[x]}}</li>
+        {% endfor %}
+    {%endif%}
+    <p>###DEBUG###</p>
+
+    {%for x in tp%}
+    <li> {{x}} --debug</li>
+    {% endfor %}
+
+    <form action ="#" method = "post">
+        <p>Spin the Wheel</p>
+        <p><input type = "submit" value = "spin"/></p>
+    </form>
+
+    
+
+{%endblock%}

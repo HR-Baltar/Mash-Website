@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block title %} end{% endblock%}
+
+{%block content%}
+
+
+    {%if carrerr != "Homeless Person" %}
+        <p>You will be a {{carrer}} with a {{car}} to get by.</p>
+        <p>You will live in a {{home}} with a {{pet}} by your side</p>
+    {%else%}
+        <p>You're gonna be homeless! That sucks for you dude.</p>
+    {%endif%}
+
+    <form action="#" method = "post">
+        <input type = "submit" value = "continue" />
+    </form>
+
+{%endblock%}

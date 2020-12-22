@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+    Projects
+{% endblock%}
+
+{%block content %}
+    <h1> Projects </h1>
+    <div id="to do">
+        <h4>To Do</h4>
+        <ol>
+            {% for x in To_do %}
+                <li>{{x}}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    <div id = "completed">
+        <h4>Completed</h4>
+        <ol>
+            {% for x in Complete %}
+            <li>{{x}}</li>
+            {% endfor %}
+                
+        </ol>
+    </div>
+    
+{% endblock %}

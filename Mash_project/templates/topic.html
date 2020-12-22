@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{%block title %}{{topic}}{% endblock%}
+
+{%block content%}
+    <h1>{{topic}}</h1>
+
+    <P>Hi {{usr}}</P>
+
+    <form action="#" method="post">
+       
+        <p>Type in some {{topic}}s:</p>
+
+        {%if count != 3 %}
+            <p><input type="text" name="item1"/></p>
+            <p><input type="text" name="item2"/></p>
+            <p><input type="text" name="item3"/></p>
+        {%else%}
+            <p>Last Topic!</p>
+            <p>
+                What will you you're home, your sanctuary, your crib.....
+            </p>
+        {%endif%}
+      
+        <p><input type="submit" value="start"></p>
+
+        <!-- <p>Topic i:</p>
+        <p><input type="text" name="item2"/></p>
+        <p><input type="submit" value="start2"></p> -->
+
+    </form>
+
+{%endblock%}
